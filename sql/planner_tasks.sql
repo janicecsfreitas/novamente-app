@@ -1,0 +1,26 @@
+-- Tabela de tarefas do planner
+CREATE TABLE IF NOT EXISTS planner_tasks (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  title TEXT NOT NULL,
+  description TEXT DEFAULT '',
+  time TEXT NOT NULL,
+  area TEXT NOT NULL DEFAULT 'Casa',
+  priority TEXT NOT NULL DEFAULT 'Normal',
+  icon TEXT DEFAULT 'task',
+  task_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  done BOOLEAN DEFAULT false,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  completed_at TIMESTAMPTZ
+);
+
+-- Habilitar RLS
+ALTER TABLE planner_tasks ENABLE ROW LEVEL SECURITY;
+
+-- Política: usuários só veem suas próprias tarefas
+CREATE POLICY "Users can manage their own tasks" ON planner_tasks
+  FOR ALL
+  USING (auth.uid() = user_id);
+
+-- Índice para busca por usuário e data
+CREATE INDEX idx_planner_tasks_user_date ON planner_tasks(user_id, task_date);

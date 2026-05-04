@@ -1,0 +1,6 @@
+{
+  "/login/page": "app/login/page.js",
+  "/planner/page": "app/planner/page.js",
+  "/alimentacao/diario/page": "app/alimentacao/diario/page.js",
+  "/metas/page": "app/metas/page.js"
+}

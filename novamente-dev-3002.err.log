@@ -1,0 +1,13 @@
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\User\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\User\Desktop\NovaMente\package-lock.json
+
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\6.pack.gz_' -> 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\6.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\0.pack.gz_' -> 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\0.pack.gz_' -> 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Restoring pack failed from C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development.pack.gz: Error: incorrect header check
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\0.pack.gz_' -> 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\5.pack.gz_' -> 'C:\Users\User\Desktop\NovaMente\.next\cache\webpack\client-development\5.pack.gz'
