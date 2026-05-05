@@ -1,9 +1,3 @@
 {
-  "/login/page": "app/login/page.js",
-  "/alimentacao/diario/page": "app/alimentacao/diario/page.js",
-  "/metas/page": "app/metas/page.js",
-  "/metas/tipo-dieta/page": "app/metas/tipo-dieta/page.js",
-  "/metas/editar-macronutrientes/page": "app/metas/editar-macronutrientes/page.js",
-  "/planner/page": "app/planner/page.js",
-  "/saude/calculadoras/page": "app/saude/calculadoras/page.js"
+  "/login/page": "app/login/page.js"
 }

@@ -56,7 +56,7 @@ export function LoginOAuthButtons() {
         {loadingProvider === "google" ? "Conectando..." : "Continuar com Google"}
       </button>
 
-      <div className="relative my-6 flex items-center">
+      {/* <div className="relative my-6 flex items-center">
         <div className="flex-grow border-t border-black/5" />
         <span className="mx-3 text-[10px] font-black uppercase tracking-[0.22em] text-[#163326]/40">
           ou continue com
@@ -72,7 +72,7 @@ export function LoginOAuthButtons() {
       >
         <IoLogoApple className="text-[22px]" />
         {loadingProvider === "apple" ? "Conectando..." : "Apple"}
-      </button>
+      </button> */}
 
       {error && (
         <p className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-center text-xs font-bold leading-5 text-red-600">

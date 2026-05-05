@@ -4,16 +4,31 @@
 
 :root {
   color-scheme: light;
+  --sat: env(safe-area-inset-top);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+  --sar: env(safe-area-inset-right);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  viewport-fit: cover;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  padding-left: var(--sal, 0);
+  padding-right: var(--sar, 0);
+
+  height: 100%;
+  min-height: 100vh;
+  background: #F8F7F2;
+  overflow: hidden;
 }
 
 body {

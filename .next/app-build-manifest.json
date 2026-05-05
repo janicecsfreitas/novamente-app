@@ -15,41 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/login/page.js"
-    ],
-    "/auth/callback/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/auth/callback/route.js"
-    ],
-    "/planner/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/planner/page.js"
-    ],
-    "/alimentacao/diario/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/alimentacao/diario/page.js"
-    ],
-    "/metas/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/metas/page.js"
-    ],
-    "/metas/tipo-dieta/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/metas/tipo-dieta/page.js"
-    ],
-    "/metas/editar-macronutrientes/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/metas/editar-macronutrientes/page.js"
-    ],
-    "/saude/calculadoras/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/saude/calculadoras/page.js"
     ]
   }
 }

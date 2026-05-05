@@ -28,7 +28,8 @@ const epilogue = Epilogue({
 
 export const metadata: Metadata = {
   title: "NovaMente",
-  description: "Aplicacao Next.js baseada nas telas da pasta telas."
+  description: "Seu assistente pessoal de saúde e produtividade",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -38,11 +39,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
+<head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body
         className={`${inter.variable} ${lexend.variable} ${manrope.variable} ${epilogue.variable} bg-background font-body-md text-on-surface antialiased`}
