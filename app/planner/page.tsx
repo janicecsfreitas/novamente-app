@@ -238,12 +238,12 @@ export default function PlannerPage() {
         </div>
       </main>
 
-      {/* <Link
+      <Link
         href="/tarefas/nova"
-        className="fixed bottom-28 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#FF6B2C] text-white shadow-[0_18px_45px_rgba(255,107,44,0.25)] active:scale-95 md:bottom-8"
+        className="fixed bottom-24 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#FF6B2C] text-white shadow-[0_18px_45px_rgba(255,107,44,0.25)] active:scale-95 md:bottom-8 md:h-14 md:w-14"
       >
-        <span className="material-symbols-outlined text-2xl">add</span>
-      </Link> */}
+        <span className="material-symbols-outlined text-xl md:text-2xl">add</span>
+      </Link>
 
       <MobileBottomMenu active="routine" />
     </div>

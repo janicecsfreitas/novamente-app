@@ -16,6 +16,17 @@
 
 html {
   viewport-fit: cover;
+  touch-action: manipulation;
+}
+
+* {
+  touch-action: manipulation;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea, select {
+  font-size: 16px !important;
 }
 
 html,
