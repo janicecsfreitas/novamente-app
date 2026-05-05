@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { AppHeader, MobileBottomMenu } from "@/components/app-navigation";
-import { MetasMobileHeader } from "@/components/metas/metas-mobile-header";
 import {
   DietId,
   MetasConfig,
@@ -21,8 +21,20 @@ type DietOption = {
 const diets: DietOption[] = [
   { id: "padrao", title: "Padrão", carbs: 50, protein: 20, fat: 30 },
   { id: "equilibrado", title: "Equilibrado", carbs: 50, protein: 25, fat: 25 },
-  { id: "pobre-gorduras", title: "Pobre em gorduras", carbs: 60, protein: 25, fat: 15 },
-  { id: "rico-proteina", title: "Rico em proteína", carbs: 25, protein: 40, fat: 35 },
+  {
+    id: "pobre-gorduras",
+    title: "Pobre em gorduras",
+    carbs: 60,
+    protein: 25,
+    fat: 15,
+  },
+  {
+    id: "rico-proteina",
+    title: "Rico em proteína",
+    carbs: 25,
+    protein: 40,
+    fat: 35,
+  },
   { id: "cetogenica", title: "Cetogênica", carbs: 5, protein: 30, fat: 65 },
   { id: "personalizar", title: "Personalizar", desc: "Definir manualmente" },
 ];
@@ -87,8 +99,6 @@ export default function TipoDietaPage() {
         <AppHeader active="goals" />
       </div>
 
-      <MetasMobileHeader backHref="/metas" title="Tipo de dieta" />
-
       <main className="mx-auto max-w-4xl px-4 py-5 md:py-8">
         <section className="mb-5 rounded-[2rem] border border-white/70 bg-white/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] backdrop-blur-xl">
           <span className="inline-flex rounded-full bg-[#e8f2ff] px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-[#FF6B2C]">
@@ -109,7 +119,8 @@ export default function TipoDietaPage() {
           {diets.map((diet) => {
             const isActive = config.dietId === diet.id;
             const details =
-              diet.desc ?? `Carbo ${diet.carbs}% • Proteína ${diet.protein}% • Gordura ${diet.fat}%`;
+              diet.desc ??
+              `Carbo ${diet.carbs}% • Proteína ${diet.protein}% • Gordura ${diet.fat}%`;
 
             return (
               <button
@@ -162,6 +173,12 @@ export default function TipoDietaPage() {
             );
           })}
         </section>
+        <Link
+          href="/metas"
+          className="mt-5 flex h-14 items-center justify-center rounded-[1.5rem] bg-[#FF6B2C] text-base font-black text-white shadow-[0_18px_45px_rgba(0,113,227,0.22)] transition hover:-translate-y-0.5 "
+        >
+          Salvar e voltar para Metas
+        </Link>
       </main>
 
       <MobileBottomMenu active="goals" />

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { AppHeader, MobileBottomMenu } from "@/components/app-navigation";
 import { MetasDonut } from "@/components/metas/metas-donut";
-import { MetasMobileHeader } from "@/components/metas/metas-mobile-header";
 import { useMetasConfig } from "@/components/metas/use-metas-config";
 
 function formatInt(value: number) {
@@ -20,7 +19,7 @@ export default function MetasPage() {
         <AppHeader active="goals" />
       </div>
 
-      <MetasMobileHeader title="Metas" />
+      
 
       <main className="mx-auto max-w-4xl px-4 py-5 md:py-8">
         <section className="mb-5 rounded-[2rem] border border-white/70 bg-white/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] backdrop-blur-xl">
@@ -81,7 +80,7 @@ export default function MetasPage() {
 
           <div className="grid grid-cols-3 gap-3 px-4">
             <div className="rounded-3xl bg-[#f8f8fa] p-4 text-center">
-              <p className="text-3xl font-black text-pink-500">
+              <p className="text-2xl font-black text-pink-500">
                 {macroGrams.carbs}g
               </p>
               <p className="mt-1 text-sm font-black text-black/45">
@@ -93,7 +92,7 @@ export default function MetasPage() {
             </div>
 
             <div className="rounded-3xl bg-[#f8f8fa] p-4 text-center">
-              <p className="text-3xl font-black text-[#0071e3]">
+              <p className="text-2xl font-black text-[#0071e3]">
                 {macroGrams.protein}g
               </p>
               <p className="mt-1 text-sm font-black text-black/45">
@@ -105,7 +104,7 @@ export default function MetasPage() {
             </div>
 
             <div className="rounded-3xl bg-[#f8f8fa] p-4 text-center">
-              <p className="text-3xl font-black text-amber-500">
+              <p className="text-2xl font-black text-amber-500">
                 {macroGrams.fat}g
               </p>
               <p className="mt-1 text-sm font-black text-black/45">
