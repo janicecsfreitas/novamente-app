@@ -140,7 +140,7 @@ export default function PerfilPage() {
   }
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#F8F7F2] pb-28 text-[#163326] md:pb-8 md:pl-72">
+    <div className="relative min-h-screen bg-[#F8F7F2] pb-28 text-[#163326] md:pb-8 md:pl-72 overflow-y-auto">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,109,0,0.16),transparent_30%),radial-gradient(circle_at_80%_15%,rgba(0,77,64,0.13),transparent_35%),radial-gradient(circle_at_50%_100%,rgba(255,214,128,0.18),transparent_35%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.025)_1px,transparent_1px)] bg-[size:72px_72px]" />
 

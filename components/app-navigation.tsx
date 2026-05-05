@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ProfileAvatarLink } from "@/components/profile-avatar-link";
 import logoHorizontal from "@/assets/logo_horizontal.png";
 
-export type MenuKey = "routine" | "health" | "food" | "goals" | "data";
+export type MenuKey = "routine" | "health" | "food" | "goals" | "data" | "profile";
 
 type AppNavigationProps = {
   active?: MenuKey;
@@ -53,6 +53,7 @@ const bottomMenuItems: Array<{
   },
   { id: "data", label: "Dados", href: "/dados", icon: "monitoring" },
   { id: "goals", label: "Metas", href: "/metas", icon: "insights" },
+  { id: "profile", label: "Perfil", href: "/perfil", icon: "person" },
 ];
 
 export function AppHeader({ active }: AppNavigationProps) {
@@ -116,7 +117,7 @@ export function AppHeader({ active }: AppNavigationProps) {
 
 export function MobileBottomMenu({ active }: AppNavigationProps) {
   return (
-    <nav className="fixed bottom-4 left-1/2 z-50 flex h-20 w-[calc(100%-28px)] max-w-md -translate-x-1/2 items-center justify-around rounded-[2rem] border border-white/70 bg-white/85 px-3 shadow-[0_18px_50px_rgba(0,0,0,0.14)] backdrop-blur-2xl md:hidden">
+    <nav className="fixed bottom-4 left-1/2 z-50 flex h-16 w-[calc(100%-20px)] max-w-md -translate-x-1/2 items-center justify-around rounded-[1.5rem] border border-white/70 bg-white/85 px-1 shadow-[0_18px_50px_rgba(0,0,0,0.14)] backdrop-blur-2xl md:hidden">
       {bottomMenuItems.map((item) => {
         const isActive = item.id === active;
 
@@ -124,21 +125,21 @@ export function MobileBottomMenu({ active }: AppNavigationProps) {
           <Link
             key={item.id}
             href={item.href}
-            className={`flex flex-1 flex-col items-center justify-center rounded-[1.5rem] px-2 py-2 transition-all duration-200 active:scale-95 ${
+            className={`flex flex-1 flex-col items-center justify-center rounded-[1rem] px-1 py-1 transition-all duration-200 active:scale-95 ${
               isActive
                 ? "bg-[#FF6D00] text-white shadow-[0_10px_24px_rgba(255,109,0,0.25)]"
                 : "text-black/35 hover:bg-[#f5f5f7] hover:text-[#FF6D00]"
             }`}
           >
             <span
-              className={`material-symbols-outlined text-[24px] ${
+              className={`material-symbols-outlined text-[18px] ${
                 isActive ? "material-symbols-filled" : ""
               }`}
             >
               {item.icon}
             </span>
 
-            <span className="mt-1 truncate text-[10px] font-black">
+            <span className="mt-0.5 truncate text-[8px] font-black">
               {item.label}
             </span>
           </Link>
