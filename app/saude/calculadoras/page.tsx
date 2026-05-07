@@ -105,7 +105,7 @@ export default function CalculadorasSaudePage() {
             Health Style
           </div>
 
-          <h1 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
+          <h1 className="text-4xl font-black tracking-[-0.05em] md:text-4xl">
             Saúde inteligente
           </h1>
 
@@ -176,7 +176,7 @@ export default function CalculadorasSaudePage() {
                   IMC
                 </span>
 
-                <h2 className="mt-5 text-6xl font-black tracking-tight">
+                <h2 className="mt-5 text-4xl font-black tracking-tight">
                   {bmi > 0
                     ? bmi.toLocaleString("pt-BR", {
                         minimumFractionDigits: 1,
@@ -201,7 +201,7 @@ export default function CalculadorasSaudePage() {
                 </span>
 
                 <div className="mt-5 flex items-end gap-2">
-                  <h2 className="text-6xl font-black tracking-tight">
+                  <h2 className="text-4xl font-black tracking-tight">
                     {formatNumber(bmrToDisplay)}
                   </h2>
 

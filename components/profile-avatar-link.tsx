@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import logoMini from "@/assets/logo_mini.png";
+import logoMini from "@/assets/logo_user.png";
 import { createClient } from "@/lib/supabase/client";
 import { getProfileMetadata } from "@/lib/supabase/user-profile";
 

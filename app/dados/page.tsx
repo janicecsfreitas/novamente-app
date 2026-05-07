@@ -316,8 +316,8 @@ export default function DadosPage() {
               Health Style
             </span>
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-black tracking-tight">
-              Seus números.
+            <h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">
+              Seus números
             </h2>
 
             <p className="mt-2 text-sm md:text-base text-black/45">

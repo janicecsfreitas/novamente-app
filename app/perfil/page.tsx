@@ -1,30 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AppHeader, MobileBottomMenu } from "@/components/app-navigation";
 import { createClient } from "@/lib/supabase/client";
 import { getProfileMetadata } from "@/lib/supabase/user-profile";
-import logoMini from "@/assets/logo_mini.png";
-
-const subscriptionPlans = [
-  {
-    name: "Essencial",
-    price: "R$ 29/mes",
-    description: "Planner, diario alimentar e metas basicas.",
-  },
-  {
-    name: "Performance Pro",
-    price: "R$ 59/mes",
-    description: "Calculos avancados e insights completos.",
-    active: true,
-  },
-  {
-    name: "Elite Anual",
-    price: "R$ 499/ano",
-    description: "Tudo do Pro com economia anual e suporte prioritario.",
-  },
-];
+import logoMini from "@/assets/logo_user.png";
 
 type ProfileRow = {
   address: string | null;
@@ -164,7 +146,7 @@ export default function PerfilPage() {
               <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#FF6D00]">
                 Conta
               </p>
-              <h1 className="mt-1 text-3xl font-black tracking-tight md:text-4xl">
+              <h1 className="mt-1 text-xl font-black tracking-tight md:text-4xl">
                 {fullName || "Perfil do usuario"}
               </h1>
               <p className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-[#163326]/40">
@@ -250,40 +232,25 @@ export default function PerfilPage() {
           </div>
         </section>
 
-        <section className="mt-5 rounded-[2rem] border border-white/80 bg-white/75 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.07)] backdrop-blur-xl">
-          <h2 className="text-xl font-black">Planos de assinatura</h2>
-          <p className="mt-2 text-sm text-[#163326]/55">
-            Escolha o plano que melhor combina com seus objetivos.
-          </p>
-
-          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {subscriptionPlans.map((plan) => (
-              <article
-                key={plan.name}
-                className={`rounded-[1.5rem] border p-4 ${
-                  plan.active
-                    ? "border-[#FF6D00]/30 bg-[#FFF3EA]"
-                    : "border-black/5 bg-white/80"
-                }`}
-              >
-                <div className="mb-2 flex items-center justify-between gap-2">
-                  <h3 className="font-black">{plan.name}</h3>
-                  {plan.active ? (
-                    <span className="rounded-full bg-[#FF6D00] px-2 py-1 text-[10px] font-black uppercase tracking-widest text-white">
-                      Atual
-                    </span>
-                  ) : null}
-                </div>
-                <p className="text-lg font-black text-[#004D40]">
-                  {plan.price}
-                </p>
-                <p className="mt-2 text-sm text-[#163326]/55">
-                  {plan.description}
-                </p>
-              </article>
-            ))}
+        <Link
+          href="/planos"
+          className="mt-5 flex items-center justify-between rounded-[2rem] border border-white/80 bg-white/75 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.07)] backdrop-blur-xl transition-all hover:border-[#1B5B0F]/20 hover:shadow-[0_28px_80px_rgba(0,0,0,0.1)]"
+        >
+          <div>
+            <h2 className="text-xl font-black">Planos de assinatura</h2>
+            <p className="mt-1 text-sm text-[#3f4945]">
+              Veja todos os planos e escolha o melhor para você.
+            </p>
           </div>
-        </section>
+          <div className="flex items-center gap-2">
+            <span className="rounded-full bg-[#FF6D00] px-3 py-1 text-xs font-black uppercase tracking-widest text-white">
+              Pro
+            </span>
+            <span className="material-symbols-outlined text-[#3f4945]">
+              chevron_right
+            </span>
+          </div>
+        </Link>
 
         <section className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2">
           <button
@@ -292,7 +259,7 @@ export default function PerfilPage() {
             onClick={saveProfile}
             type="button"
           >
-            {status === "saving" ? "Salvando..." : "Salvar Alteracoes"}
+            {status === "saving" ? "Salvando..." : "Salvar Alterações"}
           </button>
           <button
             className="flex h-14 items-center justify-center gap-2 rounded-2xl border border-[#BA1A1A]/20 bg-[#FFF1F0] font-black text-[#BA1A1A] transition hover:brightness-95"
